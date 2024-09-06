@@ -109,7 +109,7 @@ col1, col2, col3 = st.columns([1, 3, 1])
 with col1:
     # Add new location input at the top
     st.markdown(f"#### {current_lang['add_location']}")
-    new_location = st.text_input(current_lang['add_location'], key="new_location_input")
+    new_location = st.text_input(current_lang['add_location'], key="new_location_input", placeholder="e.g. Maicao, La Guajira, Colombia")
     if st.button("➕ Add Location"):
         if new_location:
             st.session_state.locations.append({"name": new_location, "label_offset": [0.0, 0.0]})
